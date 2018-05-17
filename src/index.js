@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const App = function () {
-	return <div>go</div>
-}
+import App from './containers/app'
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+//Movie Database key
+const API_KEY = '29384fec98e6802921a9d6772d27e64c'
+
+
+
+ReactDOM.render(<App />, document.querySelector('.container'))
