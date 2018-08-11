@@ -3,12 +3,10 @@ import { connect } from 'react-redux'
 
 class UsersList extends Component {
   render() {
-const {myUsers} = this.props
-
     return (
       <div>
         <ul className="col-md-4">
-          {myUsers.map(user => {
+          {this.props.users.map(user => {
             return <li>{user.nom}</li>
           })}
         </ul>
@@ -17,11 +15,4 @@ const {myUsers} = this.props
   }
 }
 
-
-function mapStateToProps(state){
-  return  {
-    myUsers : state.users
-  }
-}
-
-export default connect(mapStateToProps)(UsersList)
+export default UsersList
